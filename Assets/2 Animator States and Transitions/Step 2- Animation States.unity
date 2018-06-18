@@ -462,5 +462,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ActivateLandingTriggerName: 
   keyActivateLanding: 32
+  ActivateTurningLeftBoolName: 
+  keyLeftTurn: 276
+  ActivateTurningRightBoolName: 
+  keyRightTurn: 275
   ActivateJumpTriggerName: JumpNow
   keyActivateJump: 106

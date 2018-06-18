@@ -28,36 +28,48 @@ public class AnimationActivator : MonoBehaviour {
     
 	// Update is called once per frame
 	void Update () {
-        if (Input.GetKeyDown(keyActivateLanding))
+        //jump for capsule
+        if (ActivateJumpTriggerName != "")
         {
-            _animator.SetTrigger(ActivateLandingTriggerName);
+            if (Input.GetKeyDown(keyActivateJump))
+            {
+                _animator.SetTrigger(ActivateJumpTriggerName);
+            }
         }
 
-        if (Input.GetKeyDown(keyActivateJump))
+        //land for ship
+        if (ActivateLandingTriggerName != "")
         {
-            _animator.SetTrigger(ActivateJumpTriggerName);
+            if (Input.GetKeyDown(keyActivateLanding))
+            {
+                _animator.SetTrigger(ActivateLandingTriggerName);
+            }
         }
-
+        
         //left right controls
-        if (Input.GetKey(keyLeftTurn))
+        if (ActivateTurningLeftBoolName != "" && ActivateTurningRightBoolName != "")
         {
-            _animator.SetBool(ActivateTurningLeftBoolName, true);
-        }
-        else
-        {
-            _animator.SetBool(ActivateTurningLeftBoolName, false);
-        }
+            if (Input.GetKey(keyLeftTurn))
+            {
+                _animator.SetBool(ActivateTurningLeftBoolName, true);
+            }
+            else
+            {
+                _animator.SetBool(ActivateTurningLeftBoolName, false);
+            }
 
-        if (Input.GetKey(keyRightTurn))
-        {
-            _animator.SetBool(ActivateTurningRightBoolName, true);
-        }
-        else
-        {
-            _animator.SetBool(ActivateTurningRightBoolName, false);
-        }
+            if (Input.GetKey(keyRightTurn))
+            {
+                _animator.SetBool(ActivateTurningRightBoolName, true);
+            }
+            else
+            {
+                _animator.SetBool(ActivateTurningRightBoolName, false);
+            }
 
-        //_animator.SetBool(ActivateTurningLeftBoolName, Input.GetKeyDown(keyLeftTurn));
+            //_animator.SetBool(ActivateTurningLeftBoolName, Input.GetKeyDown(keyLeftTurn));
+
+        }
 
 
 
