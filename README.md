@@ -1,6 +1,7 @@
 # Learning Unity: Animations
 
 this Unity project consists of 3 scenes:
+
 1: scene 1 with a simple animation. an object that endlessly rotates around itself (like coins). demonstrates how to build animation.
 ![alt text](https://raw.githubusercontent.com/shacharoz/Learning-Unity--Animations/master/Builds/scene1.png)
 
