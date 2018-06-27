@@ -11,6 +11,14 @@ public class AnimationActivator : MonoBehaviour {
     public string ActivateLandingTriggerName;
     public KeyCode keyActivateLanding = KeyCode.Space;
 
+
+
+
+
+
+
+
+
     public string ActivateTurningLeftBoolName;
     public KeyCode keyLeftTurn = KeyCode.LeftArrow;
     public string ActivateTurningRightBoolName;
@@ -33,9 +41,28 @@ public class AnimationActivator : MonoBehaviour {
         {
             if (Input.GetKeyDown(keyActivateJump))
             {
-                _animator.SetTrigger(ActivateJumpTriggerName);
+                GetComponent<Animator>().SetTrigger(ActivateJumpTriggerName);
             }
         }
+
+
+
+
+
+        /*
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            GetComponent<Animator>().SetTrigger("jump");
+        }
+
+        */
+
+
+
+
+
+
+
 
         //land for ship
         if (ActivateLandingTriggerName != "")
@@ -57,7 +84,7 @@ public class AnimationActivator : MonoBehaviour {
             {
                 _animator.SetBool(ActivateTurningLeftBoolName, false);
             }
-
+            
             if (Input.GetKey(keyRightTurn))
             {
                 _animator.SetBool(ActivateTurningRightBoolName, true);
@@ -67,7 +94,11 @@ public class AnimationActivator : MonoBehaviour {
                 _animator.SetBool(ActivateTurningRightBoolName, false);
             }
 
-            //_animator.SetBool(ActivateTurningLeftBoolName, Input.GetKeyDown(keyLeftTurn));
+
+
+
+
+           // _animator.SetBool(ActivateTurningLeftBoolName, Input.GetKeyDown(keyLeftTurn));
 
         }
 
